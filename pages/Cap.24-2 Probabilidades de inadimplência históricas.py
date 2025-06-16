@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # Configuração visual
-st.set_page_config(page_title="Projetos Quant", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Projetos Quant")
 st.markdown("<h1 style='text-align: left;'>💼 Calculadora de Probabilidade de Inadimplência</h1>", unsafe_allow_html=True)
 
 # Dados da tabela
