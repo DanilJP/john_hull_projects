@@ -82,19 +82,23 @@ st.info(f'Valor presente da perda esperada : ${diff_valor_inadimplencia}')
 
 def calcula_valor_tempo_medio(face,desconto,tempo,cupom,sem):
     valor_final = 0
-    while sem <= tempo-0.25:
+    while sem <= tempo:
+        st.write(cupom)
+        st.write(sem)
+        st.write(tempo)
         if sem == tempo-0.25:
             valor = cupom + face
             valor = valor * np.exp(-sem*desconto)
+            st.write('bateu')
         else:
             valor = cupom * np.exp(-sem*desconto)
+        st.write(valor)
         valor_final = valor_final + valor
         sem = sem + 0.5
     return round(valor_final,2)
 
 sem = 0.25
-while sem <= tempo_escolhido-0.25:
+while sem <= tempo_escolhido:
     valor_tempo_medio = calcula_valor_tempo_medio(100,taxa_livre_risco/100,tempo_escolhido,valor_cupom,sem)
     st.info(f'Valor do título a partir da taxa livre de risco no tempo médio {int(sem*12)} meses : ${valor_tempo_medio}')
-    sem = sem + 0.5
-    
+    sem = sem - 0.5
