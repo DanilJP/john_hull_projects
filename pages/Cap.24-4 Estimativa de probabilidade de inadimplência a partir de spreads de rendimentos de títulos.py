@@ -99,4 +99,8 @@ while sem <= tempo_escolhido-0.25:
        valor_tempo_medio = calcula_valor_tempo_medio(100,taxa_livre_risco/100,tempo_escolhido,valor_cupom,sem_calc)
        sem_calc = sem_calc + 0.5                                              
     st.info(f'Valor do título a partir da taxa livre de risco no tempo médio {int(sem*12)} meses : ${valor_tempo_medio}')
-    sem = sem + 0.5    
+    sem = sem + 0.5   
+    st.write(tempo_escolhido)
+    st.write(sem)
+    st.write(sem_escolhido)
+    
