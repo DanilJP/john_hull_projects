@@ -27,6 +27,7 @@ with st.expander("💳 Capítulo 5 - Determinação de preços a termo e futuros
     st.page_link("pages/Cap.05-06 Rendimento conhecido.py", label="👉 5.6 Rendimento conhecido")
     st.page_link("pages/Cap.05-07 Avaliação de contratos a termo.py", label="👉 5.7 Avaliação de contratos a termo")
     st.page_link("pages/Cap.05-08 Os preços a termos e os preços futuros são iguais.py", label="👉 5.8 Os preços a termos e os preços futuros são iguais?")
+    st.page_link("pages/Cap.05-09 Preços futuros de índices de ações.py", label="👉 5.9 Preços futuros de índices de ações")
 
 
 with st.expander("💳 Capítulo 24 - Risco de Crédito"):
