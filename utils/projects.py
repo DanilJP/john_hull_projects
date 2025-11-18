@@ -23,7 +23,7 @@ projects = [
         "title": "28.1 - Market Price of Risk",
         "subtitle": "λ = (μ − r) / σ · Martingales & Measures",
         "short": "Exploração didática do preço de mercado do risco (λ), mundos real vs risk-neutral e implicações para derivativos.",
-        "image": "https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3",
+        "image": "https://www.toolshero.com/wp-content/uploads/2018/06/monte-carlo-simulation-toolshero.jpg",
         "tags": ["Quant", "Derivatives", "Risk"]
     }
     ]
