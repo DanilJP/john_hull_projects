@@ -91,7 +91,7 @@ if "mpr" in st.session_state:
     # prepare data for plotting density of terminal distribution
     df_plot = pd.DataFrame({
         "terminal_real": term_real,
-        "terminal_rn": term_rn
+        # "terminal_rn": term_rn
     })
 
     # density charts with Altair
