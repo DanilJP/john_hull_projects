@@ -46,7 +46,7 @@ with c3:
 if st.button("Calcular λ e simular"):
     lam = (mu - r) / sigma if sigma != 0 else np.nan
     st.session_state["mpr"] = {"r": r, "mu": mu, "sigma": sigma, "lambda": lam}
-    st.success(f"λ calculado: {lam:.4f} (unidades: 1/ano^{0.5} se σ anualizado)")
+    st.success(f"λ calculado: {lam:.4f}")
 
 # quick examples (based on chapter examples)
 st.markdown("**Exemplos rápidos (capítulo):**")
@@ -148,32 +148,3 @@ with col_b:
     implied_mu2 = st.number_input("Resultado: μ₂ implícito (se usar λ)", value=(r + use_lambda * sigma2), format="%.4f", disabled=True)
 st.write(f"Se λ={use_lambda:.3f} e σ₂={sigma2:.3f} então μ₂ = r + λ·σ₂ = {implied_mu2:.3f}")
 
-st.markdown(SEP, unsafe_allow_html=True)
-
-# ---------- 5) LinkedIn post generator ----------
-st.subheader("5) Gerar post curto para LinkedIn")
-default_post = (f"Explorando o preço de mercado do risco λ = (μ − r)/σ — "
-                f"é o prêmio por unidade de volatilidade que equaliza derivativos que dependem da mesma variável. "
-                f"No mundo risk-neutral λ=0, o drift = r; na prática, λ>0 ajusta o drift real. #QuantFinance #Risk")
-post_text = st.text_area("Texto do post (edite):", value=default_post, height=140)
-if st.button("Gerar/Salvar post"):
-    st.session_state["post_mpr"] = post_text
-    st.success("Post salvo na sessão. Copie e use no LinkedIn.")
-
-st.markdown(SEP, unsafe_allow_html=True)
-
-# ---------- Footer / next steps ----------
-st.subheader("Próximos passos sugeridos")
-st.write("""
-- Estimar λ empiricamente usando séries de retornos (método: regressão entre retornos excedentes e volatilidade estimada).
-- Aplicar mudança de medida (Girsanov) para transformar do mundo real ao risk-neutral e ver implicações de precificação.
-- Estender para múltiplas fontes de risco (vetores X) e entender vetor de preços do risco.
-""")
-
-st.markdown("<div style='margin:12px 60px;'>", unsafe_allow_html=True)
-if st.button("⬅ Voltar ao portfólio"):
-    try:
-        st.switch_page("Home")
-    except Exception:
-        st.query_params = {}
-st.markdown("</div>", unsafe_allow_html=True)
